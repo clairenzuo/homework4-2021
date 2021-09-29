@@ -32,6 +32,7 @@ body{
   background-size: cover ;
   background-position: center;
   background-image: url("../images/pigeon-background.JPEG");
+  background-repeat: no-repeat;
   background-color: #DDDDDD;
 
   /*Req 1*/
@@ -73,9 +74,6 @@ td{
   border-top: 2px black;
 }
 
-tr:hover {
-  background-color: rgba(126, 8, 37, 0.25);
-}
 
 
 .colhead{
@@ -105,18 +103,23 @@ table{
     border-radius: 50px;
     margin-left: auto;
     margin-right: auto;
+    border-collapse: collapse;
 }
 
 table tr{
   border: 2px solid #000000;
 }
 
-table tr:not(:first-child):nth-child(odd) {
-  background-color: transparent; /*no idea if this worked or not */
+table tr:nth-child(odd) {
+  background-color: transparent; 
 }
 
 table tr:nth-child(even) {
   background-color: #D1D1D1;
+}
+
+table tr:hover {
+  background-color: rgba(126, 8, 37, 0.25);
 }
 
 table th:first-child tr:last-child {
